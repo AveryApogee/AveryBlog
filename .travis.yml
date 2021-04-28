@@ -3,10 +3,19 @@ cache: bundler
 bundler_args: --without production
 
 rmv:
-        - 2.7.0
+ - 2.7.0
 
 before_install:
-        - gem install bundler:2.2.11
+ - gem install bundler:2.2.11
 
 script:
-        - bundle exec rspec
+ - bundle exec rspec
+
+deploy:
+ provider: heroku
+ api_key: e6a8ecb5-bab7-4472-8caa-59fdd8e93172
+ app: AveryBlog
+ run: "rake db:migrate"
+ run: "git push heroku main"
+ on:
+  branch: main
