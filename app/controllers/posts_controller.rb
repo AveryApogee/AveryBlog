@@ -12,15 +12,18 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    #before_action :authenticate_user!
     @post = Post.new
   end
 
   # GET /posts/1/edit
   def edit
+    #before_action :authenticate_user!
   end
 
   # POST /posts or /posts.json
   def create
+    #before_action :authenticate_user!
     @post = Post.new(post_params)
 
     respond_to do |format|
@@ -36,6 +39,7 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
+    #before_action :authenticate_user!
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: "Post was successfully updated." }
@@ -49,6 +53,7 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1 or /posts/1.json
   def destroy
+    #before_action :authenticate_user!
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
