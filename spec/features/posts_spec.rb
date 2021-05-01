@@ -1,8 +1,13 @@
 require 'rails_helper'
+require_relative "../support/devise"
 
 RSpec.feature "Posts", type: :feature do
+    
+  
+
   context "Create new post" do
     before(:each) do
+      create_user_and_log_in
       visit new_post_path
       within("form") do
         fill_in "Title", with: "Test title"
@@ -24,6 +29,7 @@ RSpec.feature "Posts", type: :feature do
   context "Update post" do
     let(:post) { Post.create(title: "Test title", description: "Test content") }
     before(:each) do
+      create_user_and_log_in
       visit edit_post_path(post)
     end
 
@@ -44,9 +50,11 @@ RSpec.feature "Posts", type: :feature do
     end
   end
 
+
   context "Remove existing post" do
     let!(:post) { Post.create(title: "Test title", description: "Test content") }
     scenario "remove post" do
+      create_user_and_log_in
       visit posts_path
       click_link "Destroy"
       expect(page).to have_content("Post was successfully destroyed")

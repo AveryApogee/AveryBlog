@@ -1,6 +1,10 @@
 require "rails_helper"
 
 RSpec.describe PostsController, type: :controller do
+  #@request.env["devise.mapping"] = Devise.mappings[:user]
+  
+  login_user
+  
   context "GET #index" do
     it "returns a success response" do
       get :index

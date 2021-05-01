@@ -1,7 +1,14 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
+  #def setup
+  #  sign_in FactoryBot.create(:user)
+  #end
+  
   setup do
+    #sign_in FactoryBot.create(:user)
     @post = posts(:one)
   end
 
