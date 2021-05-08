@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title><%= yield(:page_title) %> | AveryBlog</title>
     <%= csrf_meta_tags %>
@@ -20,6 +20,17 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
+
+    <main role="main">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Poet Introduction</h1>
+          <p class="lead text-muted">
+            Though our lives tightly confine our ability to interact with the world and be creative, our writings are connected to our language. Hence, poetry has the power to influence actions of those taken by people far removed from us in time. My name is Avery, and this page contains my perspective, my advice, and my desire to live harmoneously with the universe. Please consider each story to be independent, yet connected to each other by common actions taken by people of our culture years, or perhaps even millennia back in time. Anyone with access to this site should feel welcome to expand on my writings, either through interpolation, extrapolation, or with their personal experiences as reminded to you by the relatability of our words here. Nothing is mine except the path through language traversed by my stanzas, just how each of us travels across the Earth on the backs of our society. It is our purpose to envision a direction and to collaborate with others to reach these visionary goals. Be the change you want to see.
+          </p>
+        </div>
+      </section>
+    </main>
 
     <%= yield %>
   </body>
