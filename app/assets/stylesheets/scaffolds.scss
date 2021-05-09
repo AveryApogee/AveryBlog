@@ -90,3 +90,12 @@ tsnip {
   overflow: hidden;
   max-width: 75ch;
 }
+
+.custom {
+  .text-truncate {
+      max-width: 100%;
+  }
+}
+.container {
+  height: 400px;
+}
