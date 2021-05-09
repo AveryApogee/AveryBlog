@@ -19,10 +19,8 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
-        <td>
-          <tsnip>
-            <%= post.description %>
-          </tsnip>
+        <td class="tnsip">
+          <%= post.description %>
         </td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
