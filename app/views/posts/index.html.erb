@@ -4,7 +4,7 @@
 
 <h1>Posts</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Title</th>
@@ -19,7 +19,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
-        <td class="tnsip">
+        <td>
           <%= post.description %>
         </td>
         <td><%= link_to 'Show', post %></td>
