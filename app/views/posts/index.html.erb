@@ -1,6 +1,5 @@
 <% provide(:page_title, 'All Posts') %>
 
-<p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
 
@@ -19,7 +18,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
-        <td width="70%" class="text-truncate" style="max-width: calc( 70 * 1vw )">
+        <td class="text-nowrap">
           <%= post.description %>
         </td>
         <td><%= link_to 'Show', post %></td>
