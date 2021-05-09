@@ -19,9 +19,9 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
-        <div class="col-2 text-truncate">
+        <td>
           <%= post.description %>
-        </div>
+        </td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
